@@ -1,24 +1,104 @@
-<div class="ar-menu-container" id="ar-menu-container">
-    <div class="ar-menu-header">
-      <h1 class="section-title">Menu</h1>
-      <p class="ar-menu-subtitle">Descubre nuestros inovadores platillos</p>
-    </div>
-    <div class="ar-menu-categories">
-      <div class="categories-wrapper">
-        <button class="category-btn active" data-category="entradas">
-          Entradas y Aperitivos
-        </button>
-        <button class="category-btn" data-category="fuertes">
-          Platos Fuertes
-        </button>
-        <button class="category-btn" data-category="acompañamientos">
-          Acompañamientos y Guarniciones
-        </button>
-        <button class="category-btn" data-category="postres">Postres</button>
-        <button class="category-btn" data-category="bebidas">Bebidas</button>
-        <!-- <button class="category-btn active" data-category="todos">Todos</button> -->
+<!DOCTYPE HTML>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>Contact - Twenty by HTML5 UP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="../assets/css/noscript.css" />
+    <link rel="stylesheet" href="../assets/css/ar-menu.css" />
+  </noscript>
+</head>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+
+<body class="contact is-preload">
+  <div id="page-wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
+      <nav id="nav">
+        <ul>
+          <li class="current"><a href="../index.html">Welcome</a></li>
+          <li class="submenu">
+            <a href="#">Layouts</a>
+            <ul>
+              <li><a href="left-sidebar.html">Left Sidebar</a></li>
+              <li><a href="right-sidebar.html">Right Sidebar</a></li>
+              <li><a href="no-sidebar.html">No Sidebar</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li class="submenu">
+                <a href="#">Submenu</a>
+                <ul>
+                  <li><a href="#">Dolore Sed</a></li>
+                  <li><a href="#">Consequat</a></li>
+                  <li><a href="#">Lorem Magna</a></li>
+                  <li><a href="#">Sed Magna</a></li>
+                  <li><a href="#">Ipsum Nisl</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#" class="button primary">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="ar-menu-container" id="ar-menu-container">
+      <div class="ar-menu-header">
+        <h1 class="section-title">Menu</h1>
+        <p class="ar-menu-subtitle">Descubre nuestros inovadores platillos</p>
       </div>
+      <div class="ar-menu-categories">
+        <div class="categories-wrapper">
+          <button class="category-btn active" data-category="entradas">
+            Entradas y Aperitivos
+          </button>
+          <button class="category-btn" data-category="fuertes">
+            Platos Fuertes
+          </button>
+          <button class="category-btn" data-category="acompañamientos">
+            Acompañamientos y Guarniciones
+          </button>
+          <button class="category-btn" data-category="postres">Postres</button>
+          <button class="category-btn" data-category="bebidas">Bebidas</button>
+          <!-- <button class="category-btn active" data-category="todos">Todos</button> -->
+        </div>
+      </div>
+      <div class="ar-menu-grid" id="3d-container"></div>
     </div>
-    <div class="ar-menu-grid" id="3d-container"></div>
+
   </div>
-  
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/jquery.dropotron.min.js"></script>
+  <script src="../assets/js/jquery.scrolly.min.js"></script>
+  <script src="../assets/js/jquery.scrollex.min.js"></script>
+  <script src="../assets/js/browser.min.js"></script>
+  <script src="../assets/js/breakpoints.min.js"></script>
+  <script src="../assets/js/util.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ar.js"></script>
+
+  <script>
+    fetch("ar-menu.html")
+      .then((res) => res.text())
+      .then((html) => {
+        document.getElementById("ar-menu-container").innerHTML = html;
+        initializeARMenu();
+      });
+  </script>
+
+</body>
+
+</html>
