@@ -1,117 +1,123 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 	Twenty by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html style="overflow: hidden;">
+<html style="overflow: hidden">
+  <head>
+    <title>Cuna de Sabores</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Playfair+Display:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+  </head>
 
-<head>
-	<title>Cuna de Sabores</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-</head>
+  <body class="index is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <h1 id="logo">
+          <a href="index.html">
+            <img
+              src="images/logoICO.ico"
+              alt="Cuna de Sabores - Logo"
+              class="logo-image"
+              height="60"
+            />
+          </a>
+        </h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="#" class="button primary">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
 
-<body class="index is-preload">
+      <!-- Banner -->
+      <section id="banner">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          class="banner-video"
+          poster="images/banner.jpg"
+        >
+          <!-- Imagen de respaldo -->
+          <source src="videos/videoPortada.mp4" type="video/mp4" />
+        </video>
 
-	<div id="page-wrapper">
-
-		<!-- Header -->
-		<header id="header" class="alt">
-			<h1 id="logo"><a href="index.html">Cuna de Sabores</span></a></h1>
-			<nav id="nav">
-				<ul>
-					<li class="current"><a href="index.html">Welcome</a></li>
-					<li class="submenu">
-						<a href="#">Layouts</a>
-						<ul>
-							<li><a href="components/left-sidebar.html">Left Sidebar</a></li>
-							<li><a href="components/right-sidebar.html">Right Sidebar</a></li>
-							<li><a href="components/no-sidebar.html">No Sidebar</a></li>
-							<li><a href="components/contact.html">Contact</a></li>
-							<li class="submenu">
-								<a href="#">Submenu</a>
-								<ul>
-									<li><a href="#">Dolore Sed</a></li>
-									<li><a href="#">Consequat</a></li>
-									<li><a href="#">Lorem Magna</a></li>
-									<li><a href="#">Sed Magna</a></li>
-									<li><a href="#">Ipsum Nisl</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="#" class="button primary">Sign Up</a></li>
-				</ul>
-			</nav>
-		</header>
-
-		<!-- Banner -->
-		<section id="banner">
-
-			<video autoplay muted loop playsinline class="banner-video" poster="images/banner.jpg">
-				<!-- Imagen de respaldo -->
-				<source src="videos/hola5.mp4" type="video/mp4">
-			</video>
-
-			<!--
+        <!--
 						".inner" is set up as an inline-block so it automatically expands
 						in both directions to fit whatever's inside it. This means it won't
 						automatically wrap lines, so be sure to use line breaks where
 						appropriate (<br />).
 					-->
-			<div class="inner">
-
-				<header>
-					<h2>Agencia</h2>
-				</header>
-				<p>Experiencias <strong>Nuevas</strong>, para toda la familia.
-					<br />
-					Emocionado???
-					<br />
-					Es <a href="http://html5up.net">hora de la aventura</a>.
-				</p>
-				<footer>
-					<ul class="buttons stacked">
-						<li><a href="components/contenido.html" class="button fit">Clickea aqui</a></li>
-					</ul>
-				</footer>
-
-			</div>
-			<div class="inner">
-
-				<header>
-					<h2>Restaurante</h2>
-				</header>
-				<p>El <strong>Mejor</strong> restaurante
-					<br />
-					del mundo
-					<br />
-					por <a href="http://html5up.net">Cuna de Sabores</a>.
-				</p>
-				<footer>
-					<ul class="buttons stacked">
-						<li><a href="components/ar-menu.html" class="button fit">Clickea aqui</a></li>
-					</ul>
-				</footer>
-			</div>
-		</section>
-
-	</div>
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-
-</body>
-
+        <div class="inner" id="inner-izq">
+          <header>
+            <h2>Recorridos</h2>
+          </header>
+          <p>
+            <strong>Vive la aventura, descubre la tradición</strong>
+            <br />
+            Sumérgete en experiencias únicas.
+            <br />
+            Explora paisajes fascinantes y conecta con la esencia de nuestra
+            cultura.
+            <br />
+            ¿Listo para una aventura inolvidable?
+          </p>
+          <footer>
+            <ul class="buttons stacked">
+              <li>
+                <a href="components/contenido.html" class="button fit"
+                  >DESCÚBRELO AQUÍ</a
+                >
+              </li>
+            </ul>
+          </footer>
+        </div>
+        <div class="inner" id="inner-der">
+          <header>
+            <h2>Restaurante</h2>
+          </header>
+          <p>
+            <strong>Sabores que cuentan historias</strong>
+            <br />
+            Disfruta la auténtica gastronomía mexicana con ingredientes frescos,
+            recetas ancestrales y un ambiente que enamora. ¡Tu mesa te espera!
+            <br />
+          </p>
+          <footer>
+            <ul class="buttons stacked">
+              <li>
+                <a href="components/ar-menu.html" class="button fit"
+                  >RESERVA AHORA</a
+                >
+              </li>
+            </ul>
+          </footer>
+        </div>
+      </section>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

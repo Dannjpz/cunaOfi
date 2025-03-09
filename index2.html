@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubre Sabores & Explora el Mundo</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      height: 100vh;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .hero-section:hover {
+      transform: scale(1.02);
+    }
+    
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5);
+      transition: background 0.3s ease;
+    }
+    
+    .hero-section:hover .hero-overlay {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    
+    .cta-button {
+      transition: all 0.3s ease;
+    }
+    
+    .restaurant-button:hover {
+      background-color: #D97706;
+      transform: translateY(-3px);
+    }
+    
+    .travel-button:hover {
+      background-color: #2563EB;
+      transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-container {
+        flex-direction: column;
+      }
+      
+      .hero-section {
+        height: 50vh;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Hero Sections Container -->
+  <div class="hero-container flex h-screen pt-16">
+    
+    <!-- Restaurant Section -->
+    <section id="restaurant" class="hero-section w-1/2 relative overflow-hidden" style="background: url('/api/placeholder/640/960') center/cover no-repeat;">
+      <div class="hero-overlay absolute inset-0 flex flex-col justify-center items-center text-center p-8">
+        <div class="max-w-md">
+          <h2 class="text-4xl font-bold text-white mb-2">Sabores Auténticos</h2>
+          <div class="w-16 h-1 bg-amber-500 mx-auto mb-6"></div>
+          <p class="text-white text-lg mb-8">Descubre una experiencia culinaria única con sabores tradicionales y toques innovadores en cada platillo.</p>
+          <button class="cta-button restaurant-button bg-amber-600 text-white px-8 py-3 rounded-full font-bold shadow-lg">
+            Explorar Menú
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Travel Agency Section -->
+    <section id="travel" class="hero-section w-1/2 relative overflow-hidden" style="background: url('/api/placeholder/640/960') center/cover no-repeat;">
+      <div class="hero-overlay absolute inset-0 flex flex-col justify-center items-center text-center p-8">
+        <div class="max-w-md">
+          <h2 class="text-4xl font-bold text-white mb-2">Aventuras Inolvidables</h2>
+          <div class="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p class="text-white text-lg mb-8">Vive experiencias de viaje extraordinarias con itinerarios personalizados a los destinos más fascinantes del mundo.</p>
+          <button class="cta-button travel-button bg-blue-600 text-white px-8 py-3 rounded-full font-bold shadow-lg">
+            Descubrir Destinos
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
