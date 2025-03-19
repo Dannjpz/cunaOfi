@@ -1,6 +1,8 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=IM+Fell+English:ital@0;1&family=Spectral:ital,wght@0,400;0,600;1,400&family=Bodoni+Moda:ital,wght@0,400;0,600;1,400&family=Rozha+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&family=Josefin+Slab:ital,wght@0,400;0,600;1,400&family=Italiana&family=Stardos+Stencil:wght@400;700&family=Rye&family=Fredericka+the+Great&family=Lobster&family=Sacramento&family=Special+Elite&family=Homemade+Apple&family=Satisfy&display=swap");
 /*
 	Twenty by HTML5 UP
 	html5up.net | @ajlkn
@@ -108,6 +110,42 @@ menu,
 nav,
 section {
   display: block;
+}
+
+:root {
+  --primary-color: #b28571;
+  --second-color: #222222;
+  --three-color: #ffffff;
+  --cuat-color: #b28571;
+  --text-color: #1c1c1c;
+  --text-colorBack: #ffffff;
+  --colorFondo: #e9e2d2;
+  --font-sans: 'Montserrat', sans-serif;
+  --font-modern: 'Poppins', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-vintage-1: 'Abril Fatface', cursive;
+  --font-vintage-2: 'Libre Baskerville', serif;
+  --font-vintage-3: 'Old Standard TT', serif;
+  --font-vintage-4: 'Cinzel', serif;
+  --font-vintage-5: 'Lora', serif;
+  --font-vintage-6: 'Crimson Text', serif;
+  --font-vintage-7: 'IM Fell English', serif;
+  --font-vintage-8: 'Spectral', serif;
+  --font-vintage-9: 'Bodoni Moda', serif;
+  --font-vintage-10: 'Rozha One', serif;
+  --font-art-deco-1: 'Poiret One', cursive;
+  --font-art-deco-2: 'Josefin Slab', serif;
+  --font-art-deco-3: 'Italiana', serif;
+  --font-art-deco-4: 'Stardos Stencil', cursive;
+  --font-art-deco-5: 'Rye', cursive;
+  --font-art-deco-6: 'Fredericka the Great', cursive;
+  /* Fuentes Retro */
+  --font-retro-1: 'Lobster', cursive;
+  --font-retro-2: 'Sacramento', cursive;
+  --font-retro-3: 'Special Elite', cursive;
+  --font-retro-4: 'Homemade Apple', cursive;
+  --font-retro-5: 'Satisfy', cursive;
 }
 
 body {
@@ -2287,8 +2325,8 @@ input[type="submit"].primary,
 input[type="reset"].primary,
 button.primary,
 .button.primary {
-  background: #b9504a;
-  border-color: #b9504a;
+  background: var(--second-color);
+  border-color: var(--second-color);
   color: #fff !important;
 }
 
@@ -2297,8 +2335,8 @@ input[type="submit"].primary:hover,
 input[type="reset"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-  background: #dcad8b !important;
-  border-color: #dcad8b !important;
+  background: var(--second-color) !important;
+  border-color: var(--second-color) !important;
 }
 
 input[type="button"].fit,
@@ -2431,6 +2469,9 @@ button.small,
   top: 0;
   width: 100%;
   z-index: 10000;
+  /* Aseguramos que el header tenga una altura definida */
+  height: auto;
+  min-height: 60px;
 }
 
 #header h1 {
@@ -2482,6 +2523,8 @@ button.small,
   font-size: 1em;
   min-width: 0;
   width: auto;
+  line-height: 1.5em;
+  padding: 0 1.2em;
 }
 
 #header nav ul li.submenu>a {
@@ -2648,7 +2691,7 @@ button.small,
 
 #banner {
   background-attachment: scroll, scroll, scroll, fixed;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--colorFondo);
   /* background-image: url("images/light-bl.svg"), url("images/light-br.svg"), url("images/overlay.png"), url("../../images/banner.jpg"); */
   background-position: bottom left, bottom right, top left, top center;
   background-repeat: no-repeat, no-repeat, repeat, no-repeat;
@@ -2664,6 +2707,14 @@ button.small,
   overflow-y: hidden;
   /* Permite scroll vertical */
   min-height: 100vh;
+}
+
+#banner,
+.ar-menu-container,
+.wrapper {
+  /* Añadimos padding-top para compensar el header fijo */
+  padding-top: 130px;
+  margin-top: 0;
 }
 
 /* Video de fondo */
@@ -2732,6 +2783,7 @@ button.small,
   width: 40%;
   position: relative;
   z-index: 3;
+  margin-top: 5em;
 }
 
 #banner {
@@ -3126,9 +3178,9 @@ body.index #main {
 
   /* Header */
 
-  /* #header {
+  #header {
     display: none;
-  } */
+  }
 
   #header {
     position: fixed;
@@ -3731,15 +3783,38 @@ body.index #main {
 /* Ajustes para móviles pequeños */
 @media screen and (max-width: 480px) {
 
+  #navButton .toggle {
+    margin-left: 10%;
+    padding-bottom: 10px;
+
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #navButton .toggle:before {
-    font-size: 1.2em;
-    left: 12px;
-    top: 10px;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: var(--second-color);
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow:
+      0 -8px 0 0 var(--second-color),
+      0 8px 0 0 var(--second-color);
+    z-index: 10;
+  }
+
+  #navButton .toggle:after {
+    display: none;
   }
 
   #banner {
     padding-top: 50px;
-    /* Header más pequeño */
   }
 
   #banner .inner {

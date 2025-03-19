@@ -202,3 +202,71 @@ function initializeCategorySlider() {
         wrapper.scrollLeft = scrollLeft - walk;
     });
 }
+
+// Funcionalidad para el menú hamburguesa
+function initializeMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const sideMenu = document.querySelector('.side-menu');
+    const closeBtn = document.querySelector('.side-menu-close');
+    const body = document.body;
+
+    // Aseguramos que el icono de hamburguesa se muestre correctamente
+    if (menuToggle && !menuToggle.querySelector('.fa-bars')) {
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+
+    // Aseguramos que el icono de cierre se muestre correctamente
+    if (closeBtn && !closeBtn.querySelector('.fa-times')) {
+        closeBtn.innerHTML = '<i class="fas fa-times"></i>';
+    }
+
+    // Crear overlay si no existe
+    let overlay = document.querySelector('.menu-overlay');
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        body.appendChild(overlay);
+    }
+
+    // Abrir menú
+    menuToggle.addEventListener('click', function () {
+        sideMenu.classList.add('active');
+        overlay.classList.add('active');
+        body.style.overflow = 'hidden'; // Prevenir scroll
+    });
+
+    // Cerrar menú
+    function closeMenu() {
+        sideMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        body.style.overflow = '';
+    }
+
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+}
+
+// Modificamos la función existente para incluir la inicialización del menú
+document.addEventListener('DOMContentLoaded', function () {
+    if (document.querySelector('.mobile-menu-toggle')) {
+        initializeMobileMenu();
+    }
+    if (typeof initializeARMenu === 'function') {
+        initializeARMenu();
+    }
+
+    initializeScrollHeader();
+});
+
+// Función para manejar el efecto de scroll en el header
+function initializeScrollHeader() {
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
